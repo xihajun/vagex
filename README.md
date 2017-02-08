@@ -3,7 +3,7 @@
 
 使用方式：
 
-wget http://23.94.123.6/vagex/vagex.sh
+wget https://raw.githubusercontent.com/xihajun/vagex/master/vagex.sh
 
 chmod +x vagex.sh
 
