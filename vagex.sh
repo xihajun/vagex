@@ -4,7 +4,8 @@ wget https://raw.githubusercontent.com/catonisland/Vagex-For-CentOS-6/master/epe
 rpm -ivh epel-release-6-8.noarch.rpm
 yum groupinstall -y xfce
 yum install -y tigervnc tigervnc-server
-
+#关闭防火墙（重启后生效）
+chkconfig iptables off
 #写入配置文件
 cat > /etc/sysconfig/vncservers<<EOF
 VNCSERVERS="1:root"
