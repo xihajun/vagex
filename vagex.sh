@@ -124,3 +124,7 @@ service vncserver restart
 chkconfig vncserver on
 #安装火狐
 yum -y install firefox
+#查找是否安装NetworkManager
+echo "查看是否安装NetworkManager"
+echo "若有安装请卸载"
+find / -name NetworkManager
