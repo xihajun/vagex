@@ -58,9 +58,9 @@ echo "================================================="
 #安装相应的软件
 
 if [ "$release" == "CentOS" ]; then
-  echo "请选择相应的发行版本系统（输入数字序号）："
   echo "1.CentOS 5.x"
   echo "2.CentOS 6.x"
+  echo "请选择相应的发行版本系统（输入数字序号）："
   read number
   if [ "$number" == "" ]; then
       echo "未选择任何发行版本，脚本退出"
