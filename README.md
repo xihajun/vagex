@@ -3,8 +3,10 @@
 
 使用方式：
 
-wget https://raw.githubusercontent.com/xihajun/vagex/master/vagex.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/xihajun/vagex/master/vagex.sh && bash vagex.sh
 
-chmod +x vagex.sh
+最后需要reboot一下方可生效
 
-./vagex.sh
+重置密码命令：vncpasswd
+
+重启vnc命令：service vncserver restart
