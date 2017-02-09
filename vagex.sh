@@ -3,9 +3,6 @@
 
 #写一个通用匹配的程序，以后就直接用这个了
 
-#安装判断系统程序
-yum –y install lsb
-
 #取操作系统的名称
 Get_Dist_Name()
 {
@@ -50,7 +47,11 @@ ver1=$(eval $ver1str)
 
 echo "================================================="
 echo "操作系统：$release "
-echo "发行版本：$ver1 "
+if [ "$ver1" == "" ]; then
+  echo "发行版本：脚本获得不了操作系统版本号"
+else
+  echo "发行版本：$ver1 "
+fi
 echo "位数：$ver2 "
 echo "================================================="
 
@@ -93,10 +94,7 @@ if [[ "$release" == "Ubuntu" ]] || [[ "$release" == "Debian" ]]; then
   echo "欢迎您的再次来访：www.edu-ing.cn"
   exit 1
 fi
-if [ "$ver1" == "" ]; then
-  echo "脚本获得不了操作系统版本号，错误退出"
-  exit 1
-fi
+
 
 
 #写入配置文件
