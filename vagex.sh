@@ -68,6 +68,8 @@ if [ "$release" == "CentOS" ]; then
     echo "正在为您安装软件"
     yum groupinstall xfce-4.4
     yum install vnc vnc-server
+    #关闭防火墙（重启后生效）
+    chkconfig iptables off
   elif [ "$number" == "2" ];then
     echo "您选择的操作系统是CentOS 6.x"
     echo "正在为您安装软件"
@@ -75,6 +77,8 @@ if [ "$release" == "CentOS" ]; then
     rpm -ivh epel-release-6-8.noarch.rpm
     yum groupinstall -y xfce
     yum install -y tigervnc tigervnc-server
+    #关闭防火墙（重启后生效）
+    chkconfig iptables off
   else
     echo "目前该脚本只支持CentOS 5.x、CentOS 6.x，其他系统会在以后更新"
     echo "感谢支持嘻哈小屋！"
@@ -94,8 +98,7 @@ if [ "$ver1" == "" ]; then
   exit 1
 fi
 
-#关闭防火墙（重启后生效）
-chkconfig iptables off
+
 #写入配置文件
 cat > /etc/sysconfig/vncservers<<EOF
 VNCSERVERS="1:root"
@@ -121,7 +124,4 @@ service vncserver restart
 chkconfig vncserver on
 #安装火狐
 yum -y install firefox
-#查找是否安装NetworkManager
-echo "查看是否安装NetworkManager"
-echo "若有安装请卸载"
-find / -name NetworkManager
+
