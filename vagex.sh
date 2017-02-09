@@ -30,9 +30,9 @@ Get_Dist_Name()
 Get_OS_Bit()
 {
     if [[ `getconf WORD_BIT` = '32' && `getconf LONG_BIT` = '64' ]] ; then
-        ver3='x64'
+        ver2='x64'
     else
-        ver3='x32'
+        ver2='x32'
     fi
 }
 
@@ -51,8 +51,7 @@ ver1=$(eval $ver1str)
 echo "================================================="
 echo "操作系统：$release "
 echo "发行版本：$ver1 "
-echo "内核版本：$ver2 "
-echo "位数：$ver3 "
+echo "位数：$ver2 "
 echo "================================================="
 
 #安装相应的软件
