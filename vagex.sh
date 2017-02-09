@@ -4,7 +4,7 @@
 #写一个通用匹配的程序，以后就直接用这个了
 
 #安装判断系统程序
-yum install lsb –y
+yum –y install lsb
 
 #取操作系统的名称
 Get_Dist_Name()
