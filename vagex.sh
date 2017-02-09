@@ -61,16 +61,16 @@ if [ "$release" == "CentOS" ]; then
   echo "A.CentOS 5.x"
   echo "B.CentOS 6.x"
   echo "请选择相应的发行版本系统（输入数字序号）："
-  read number
-  if [ "$number" == "" ]; then
+  #read number
+  if [ "$?" == "" ]; then
       echo "未选择任何发行版本，脚本退出"
   exit 1
-  elif ["$number" == "A"];then
+  elif ["$?" == "A"];then
     echo "您选择的操作系统是CentOS 5.x"
     echo "正在为您安装软件"
     yum groupinstall xfce-4.4
     yum install vnc vnc-server
-  elif ["$number" == "B"];then
+  elif ["$?" == "B"];then
     echo "您选择的操作系统是CentOS 6.x"
     echo "正在为您安装软件"
     wget https://raw.githubusercontent.com/catonisland/Vagex-For-CentOS-6/master/epel-release-6-8.noarch.rpm;
