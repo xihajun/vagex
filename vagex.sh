@@ -66,8 +66,8 @@ if [ "$release" == "CentOS" ]; then
   elif [ "$number" == "1" ];then
     echo "您选择的操作系统是CentOS 5.x"
     echo "正在为您安装软件"
-    yum groupinstall xfce-4.4
-    yum install vnc vnc-server
+    yum groupinstall -y xfce-4.4
+    yum install -y vnc vnc-server
     #关闭防火墙（重启后生效）
     chkconfig iptables off
   elif [ "$number" == "2" ];then
