@@ -8,8 +8,8 @@ apt-get install -y gnome
 apt-get install -y xfce4 xfce4-goodies gnome-icon-theme tightvncserver
 apt-get install -y iceweasel
 #新增用户
-adduser vnc
 echo "新建vnc用户，请输入密码"
+adduser vnc
 apt-get install sudo
 gpasswd -a vnc sudo
 su - vnc
