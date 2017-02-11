@@ -157,7 +157,7 @@ if [ "$release" == "Debian" ]; then
   fi
 fi
 
-if [[ "$release" == "Ubuntu" ]] || [[ "$release" == "Debian" ]]; then
+if [ "$release" == "Ubuntu" ]; then
   echo "暂时不支持该操作系统"
   echo "目前该脚本只支持CentOS 5.x、CentOS 6.x，其他系统会在以后更新"
   echo "感谢支持嘻哈小屋！"
