@@ -5,8 +5,8 @@ apt-get update
 apt-get upgrade -y
 #安装必要软件
 apt-get install -y gnome
-apt-get install xfce4 xfce4-goodies gnome-icon-theme tightvncserver
-apt-get install iceweasel
+apt-get install -y xfce4 xfce4-goodies gnome-icon-theme tightvncserver
+apt-get install -y iceweasel
 #新增用户
 adduser vnc
 echo "新建vnc用户，请输入密码"
