@@ -60,6 +60,7 @@ echo "================================================="
 if [ "$release" == "CentOS" ]; then
   echo "1.CentOS 5.x"
   echo "2.CentOS 6.x"
+  echo "3.CentOS 7.x"
   read -p "请选择相应的发行版本系统（输入数字序号）：" number
   if [ "$number" == "" ]; then
     echo "未选择任何发行版本，脚本退出"
@@ -77,6 +78,13 @@ if [ "$release" == "CentOS" ]; then
     wget https://raw.githubusercontent.com/catonisland/Vagex-For-CentOS-6/master/epel-release-6-8.noarch.rpm;
     rpm -ivh epel-release-6-8.noarch.rpm
     yum groupinstall -y xfce
+    yum install -y tigervnc tigervnc-server
+    #关闭防火墙（重启后生效）
+    chkconfig iptables off
+  elif [ "$number" == "3" ];then
+    echo "您选择的操作系统是CentOS 7.x"
+    echo "正在为您安装软件"
+    yum groupinstall "GNOME Desktop" "Graphical Administration Tools"
     yum install -y tigervnc tigervnc-server
     #关闭防火墙（重启后生效）
     chkconfig iptables off
