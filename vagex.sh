@@ -84,7 +84,7 @@ if [ "$release" == "CentOS" ]; then
   elif [ "$number" == "3" ];then
     echo "您选择的操作系统是CentOS 7.x"
     echo "正在为您安装软件"
-    yum groupinstall "GNOME Desktop" "Graphical Administration Tools"
+    yum groupinstall -y xfce
     yum install -y tigervnc tigervnc-server
     #关闭防火墙（重启后生效）
     chkconfig iptables off
