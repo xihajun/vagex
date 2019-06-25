@@ -3,8 +3,9 @@
 
 使用方式：
 
+```
 wget -N --no-check-certificate https://raw.githubusercontent.com/xihajun/vagex/master/vagex.sh && bash vagex.sh
-
+```
 最后需要reboot一下方可生效
 
 重置密码命令：vncpasswd
@@ -12,5 +13,6 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/xihajun/vagex/m
 重启vnc命令：service vncserver restart
 
 测试脚本
+```
 wget -N --no-check-certificate https://raw.githubusercontent.com/xihajun/vagex/master/vagex_test.sh && bash vagex_test.sh
-
+```
